@@ -10,11 +10,11 @@ The goal of this repository is to demonstrate practical understanding of AWS dat
 
 | Project | Topic | Main AWS Services / Technologies |
 |---|---|---|
-| [01 — RDS EC2 Application](./01-rds-ec2-application/) | EC2-hosted application connected to an Amazon RDS database | EC2, RDS, IAM, Security Groups, Python/Flask |
-| [02 — RDS High Availability and Read Replica](./02-rds-high-availability-read-replica/) | High availability and read scaling using RDS features | RDS, Multi-AZ, Read Replica, EC2 |
-| [03 — Aurora High Availability and Failover](./03-aurora-high-availability-failover/) | Aurora replication, endpoints, and failover | Amazon Aurora, RDS |
-| [04 — DynamoDB Design and Performance](./04-dynamodb-design-performance/) | NoSQL data modeling and performance experimentation | DynamoDB, Partition Keys, Sort Keys, GSI, LSI |
-| [05 — DynamoDB + ElastiCache for Valkey](./05-dynamodb-elasticache-valkey/) | Lazy loading and cache invalidation using a caching layer | DynamoDB, ElastiCache for Valkey, EC2, IAM, Python |
+| [01 - RDS EC2 Application](./01-rds-ec2-application/) | EC2-hosted application connected to an Amazon RDS database | EC2, RDS, IAM, Security Groups, Python/Flask |
+| [02 - RDS High Availability and Read Replica](./02-rds-high-availability-read-replica/) | High availability and read scaling using RDS features | RDS, Multi-AZ, Read Replica, EC2 |
+| [03 - Aurora High Availability and Failover](./03-aurora-high-availability-failover/) | Aurora replication, endpoints, and failover | Amazon Aurora, RDS |
+| [04 - DynamoDB Design and Performance](./04-dynamodb-design-performance/) | NoSQL data modeling and performance experimentation | DynamoDB, Partition Keys, Sort Keys, GSI, LSI |
+| [05 - DynamoDB + ElastiCache for Valkey](./05-dynamodb-elasticache-valkey/) | Lazy loading and cache invalidation using a caching layer | DynamoDB, ElastiCache for Valkey, EC2, IAM, Python |
 
 ---
 
