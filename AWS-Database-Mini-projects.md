@@ -1,8 +1,8 @@
-# AWS Cloud & DevOps Mini Projects
+# AWS Database Mini Projects
 
-A practical collection of hands-on AWS projects built while developing skills in **Cloud Engineering, DevOps, infrastructure, automation, security, and troubleshooting**.
+A practical collection of five hands-on AWS database projects built to strengthen understanding of database architecture, high availability, scalability, performance, caching, security, and cloud troubleshooting.
 
-The goal of this repository is to demonstrate practical understanding of AWS services through implementation-focused mini-projects rather than only theoretical learning.
+The goal of this repository is to demonstrate practical understanding of AWS database services and architecture patterns through implementation-focused projects.
 
 ---
 
@@ -10,74 +10,68 @@ The goal of this repository is to demonstrate practical understanding of AWS ser
 
 | Project | Topic | Main AWS Services / Technologies |
 |---|---|---|
-| [Project 1 — Server Data Archival](./project-1-server-data-archival/) | Automated archival of old server files to object storage | Amazon S3, EC2, IAM, Python, Boto3 |
-| [Project 2 — Highly Available Web Application](./project-2-high-availability-web-app/) | Load-balanced and self-healing web application | EC2, Application Load Balancer, Auto Scaling, Launch Templates, CloudWatch, Multi-AZ |
-| [Project 3 — VPC Networking](./project-3-vpc-networking/) | Designing and testing AWS network infrastructure | VPC, Subnets, Route Tables, Internet Gateway, Security Groups, Network ACLs |
-| [Project 4 — Serverless REST API](./project-4-serverless-rest-api/) | Building and testing a serverless API workflow | AWS Lambda, API Gateway, IAM, Python |
-| [Project 5 — DynamoDB + Valkey Caching](./project-5-dynamodb-valkey/) | Implementing lazy loading and cache invalidation | DynamoDB, ElastiCache for Valkey, EC2, IAM, Python, Redis |
-
-> **Note:** Update the folder names in this table if your local project directories use different names.
+| [01 — RDS EC2 Application](./01-rds-ec2-application/) | EC2-hosted application connected to an Amazon RDS database | EC2, RDS, IAM, Security Groups, Python/Flask |
+| [02 — RDS High Availability and Read Replica](./02-rds-high-availability-read-replica/) | High availability and read scaling using RDS features | RDS, Multi-AZ, Read Replica, EC2 |
+| [03 — Aurora High Availability and Failover](./03-aurora-high-availability-failover/) | Aurora replication, endpoints, and failover | Amazon Aurora, RDS |
+| [04 — DynamoDB Design and Performance](./04-dynamodb-design-performance/) | NoSQL data modeling and performance experimentation | DynamoDB, Partition Keys, Sort Keys, GSI, LSI |
+| [05 — DynamoDB + ElastiCache for Valkey](./05-dynamodb-elasticache-valkey/) | Lazy loading and cache invalidation using a caching layer | DynamoDB, ElastiCache for Valkey, EC2, IAM, Python |
 
 ---
 
 ## Skills Demonstrated
 
-- AWS resource provisioning and configuration
-- IAM roles, policies, and least-privilege access
-- EC2 instance administration
-- S3 object storage and lifecycle concepts
-- VPC networking and security controls
-- Load balancing and Auto Scaling
-- Serverless application concepts
-- DynamoDB data access
-- Redis/Valkey caching patterns
-- Cache-aside / lazy-loading architecture
-- Cache invalidation
-- Python automation with Boto3
-- Troubleshooting AWS permissions and connectivity
-- Testing and documenting cloud infrastructure
-- Cost awareness and resource cleanup
+- Amazon RDS configuration and database connectivity
+- RDS Multi-AZ and Read Replica concepts
+- Amazon Aurora replication and failover concepts
+- DynamoDB data modeling and key design
+- DynamoDB performance testing and access patterns
+- ElastiCache for Valkey integration
+- Lazy loading and cache-aside architecture
+- Cache invalidation strategies
+- EC2 administration and application hosting
+- IAM roles, permissions, and least-privilege access
+- Security Groups and network troubleshooting
+- Database high availability and scalability concepts
+- Python automation and AWS SDK usage
+- Testing, documentation, and AWS resource cleanup
 
 ---
 
 ## Repository Structure
 
 ```text
-aws-cloud-devops-mini-projects/
+aws-database-mini-projects/
 │
 ├── README.md
 │
-├── project-1-server-data-archival/
+├── 01-rds-ec2-application/
 │   ├── README.md
-│   ├── src/
-│   └── docs/
+│   └── ...
 │
-├── project-2-high-availability-web-app/
+├── 02-rds-high-availability-read-replica/
 │   ├── README.md
-│   └── docs/
+│   └── ...
 │
-├── project-3-vpc-networking/
+├── 03-aurora-high-availability-failover/
 │   ├── README.md
-│   └── docs/
+│   └── ...
 │
-├── project-4-serverless-rest-api/
+├── 04-dynamodb-design-performance/
 │   ├── README.md
-│   └── docs/
+│   └── ...
 │
-└── project-5-dynamodb-valkey/
+└── 05-dynamodb-elasticache-valkey/
     ├── README.md
-    ├── src/
-    ├── tests/
-    └── docs/
+    └── ...
 ```
 
-Each project contains its own documentation, implementation files, test evidence, and architecture diagrams where applicable.
+Each project contains its own documentation, implementation details, and test evidence where applicable.
 
 ---
 
 ## Approach
 
-For each project, the workflow generally included:
+For each database project, the workflow generally included:
 
 1. Understanding the AWS service or architecture.
 2. Creating and configuring the required AWS resources.
@@ -88,18 +82,17 @@ For each project, the workflow generally included:
 7. Documenting the implementation and cleanup process.
 8. Removing unused AWS resources to avoid unnecessary charges.
 
+---
 
 ## Technologies Used
 
 - **Cloud:** Amazon Web Services
 - **Compute:** Amazon EC2
-- **Storage:** Amazon S3, EBS
-- **Networking:** Amazon VPC, Security Groups, Route Tables
-- **Databases:** Amazon DynamoDB
+- **Relational Databases:** Amazon RDS, Amazon Aurora
+- **NoSQL Database:** Amazon DynamoDB
 - **Caching:** ElastiCache for Valkey
-- **Serverless:** AWS Lambda, API Gateway
-- **Scalability:** Application Load Balancer, Auto Scaling
-- **Monitoring:** Amazon CloudWatch
+- **Networking:** VPC, Security Groups, Subnets
+- **Security:** AWS IAM
 - **Automation:** Python, Boto3
 - **Version Control:** Git and GitHub
 
@@ -107,17 +100,18 @@ For each project, the workflow generally included:
 
 ## Learning Outcomes
 
-Through these projects, I worked on practical cloud scenarios involving:
+Through these projects, I worked on practical database scenarios involving:
 
-- Secure AWS access using IAM roles
-- Infrastructure configuration and validation
-- Network connectivity and security-group troubleshooting
-- High availability and scalability
-- Object archival and idempotent automation
-- Serverless request handling
-- Database access patterns
-- Cache hits, cache misses, and invalidation
-- Operational documentation and cleanup discipline
+- Connecting applications hosted on EC2 to managed databases
+- Understanding RDS high availability and read scaling
+- Exploring Aurora replication and failover behavior
+- Designing DynamoDB tables and access patterns
+- Understanding database and caching responsibilities
+- Implementing cache hits, cache misses, and invalidation
+- Applying IAM and network-security controls
+- Troubleshooting connectivity and permission issues
+- Documenting implementation steps and test results
+- Practicing AWS cost awareness and resource cleanup
 
 ---
 
